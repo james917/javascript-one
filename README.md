@@ -1,1 +1,1 @@
-### This is an example of using Canvas tag vs a regular Div tag to create a simple Carousel. Only Javascript will used in this example 
+### This is an example of using Canvas. Creating a Carosuel using Javascript and creating an animation effect with JS. 
