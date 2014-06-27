@@ -27,3 +27,20 @@
 			}
 		}
 
+		function switchImage() {
+			img.setAttribute('src',imagePaths[currentImage++]);
+			if (currentImage >= imagePaths.length)
+				currentImage = 0;
+				
+			showCanvasCtx.globalAlpha = 0.1;
+			revealTimer = setInterval(revealImage,100);
+		}
+			
+		function revealImage() {
+			showCanvasCtx.save();
+			showCanvasCtx.drawImage(img,0,0,592,596);
+			showCanvasCtx.globalAlpha += 0.1;
+			if (showCanvasCtx.globalAlpha >= 1.0)
+				clearInterval(revealTimer);
+			showCanvasCtx.restore();
+		}
